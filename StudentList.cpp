@@ -1,15 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
 struct student {
-  char firstName[21];
-  char lastName[21];
+  char firstName[51];
+  char lastName[51];
   int studentID;
   float GPA;
 };
 
+student* ADD();
+void PRINT(vector<student*> studentList);
+void DELETE(vector<student*> studentList, int ID);
 
 int main() {
   char action[7];
@@ -36,6 +40,9 @@ int main() {
 	if (deleteCheck[0] == 'Y') {
 	  cout << "Deleting student" << endl;
 	  deleteChecking = false;
+
+
+
 	  //running = false;
 	}
 	else if (deleteCheck[0] == 'N') {
@@ -63,3 +70,16 @@ int main() {
 
   
 }//end of main()
+
+student* ADD() {
+  student* newStudent = new student();
+  cout << "Enter first name: " << endl;
+  cin >> newStudent->firstName;
+  cin.clear();
+  cin.ignore(51,'\n');
+  cout << "Enter last name: " << endl;
+  cin >> newStudent->lastName;
+  cin.clear();
+  cin.ignore(51,'\n');
+
+}
