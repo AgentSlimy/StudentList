@@ -11,6 +11,7 @@
 #include <iomanip>
 using namespace std;
 
+//Student struct w/ first name, last name, student ID, GPA
 struct student {
     char firstName[51];
     char lastName[51];
@@ -18,6 +19,7 @@ struct student {
     float GPA;
 };
 
+//Function
 student* ADD();
 void PRINT(vector<student*> studentList);
 void DELETE(vector<student*>* studentList, int id);
@@ -107,7 +109,7 @@ void PRINT(vector<student*> studentList) {
     }
 }
 
-//Deleting a student (DELETE)
+//Deleting a student (DELETE), assistance from Stefan Ene
 void DELETE(vector<student*>* studentList, int id) {
     vector<student*>::iterator del; //Iterator
     for (del = studentList->begin(); del != studentList->end(); del++) {
