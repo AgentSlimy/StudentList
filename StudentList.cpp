@@ -106,6 +106,7 @@ void PRINT(vector<student*> studentList) {
         cout << (*print)->lastName << ", ";
         cout << (*print)->studentID << ", ";
         cout << fixed << setprecision(2) << (*print)->GPA << endl; //Rounds GPA to 2 decimal places 
+        cout << endl;
     }
 }
 
